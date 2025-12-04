@@ -1,0 +1,31 @@
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f3f3;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Box kolem kalkulačky */
+        .calculator-box {
+            background: white;
+            border: 2px solid #444;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        }
+
+        button {
+            margin: 8px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+        }

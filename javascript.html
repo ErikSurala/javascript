@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const output = document.querySelector('#result');
+
+            document.querySelectorAll('.kalkulacka_button').forEach(button => {
+                button.onclick = function() {
+
+                    const a = Math.floor(Math.random() * 10) + 1;
+                    const b = Math.floor(Math.random() * 10) + 1;
+                    const op = button.dataset.op;
+
+                    let solution;
+
+                    if (op === "+") solution = a + b;
+                    if (op === "-") solution = a - b;
+                    if (op === "*") solution = a * b;
+                    if (op === "/") solution = (a / b).toFixed(2);
+
+                    output.innerHTML = `${a} ${op} ${b} = <strong>${solution}</strong>`;
+                };
+            });
+
+        });
+    </script>
+
+    <title>Mini Kalkulačka</title>
+</head>
+
+<body>
+
+    <div class="calculator-box">
+        <h1>Mini kalkulačka</h1>
+
+        <button class="kalkulacka_button" data-op="+">Sčítání</button>
+        <button class="kalkulacka_button" data-op="-">Odčítání</button>
+        <button class="kalkulacka_button" data-op="*">Násobení</button>
+        <button class="kalkulacka_button" data-op="/">Dělení</button>
+
+        <p id="result">Zmáčkni tlačítko pro vytvoření příkladu</p>
+    </div>
+
+</body>
+</html>
